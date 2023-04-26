@@ -2,10 +2,52 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="kagipo_icon.ico">
     <title>SchoolFes Temporary</title>
     <link rel="stylesheet" href="style.css">
+    <script src="program.js"></script>
   </head>
   <body>
-    
+    <h1>R5文化祭 教室混雑状況管理サイト</h1>
+        <form>
+            <h2>管理者ログインフォーム</h2>
+            ユーザーID:<input type="text" id="admin-id"><br>
+            パスワード:<input type="password" id="admin-password"><br>
+            <input type="button" value="ログイン" onclick="if(isLoggedIn()){alert('ログインに成功しました。');}else{alert('IDまたはパスワードが間違っています。');}">
+        </form>
+        <hr>
+        <h2>各教室の混雑状況</h2>
+        <table border="1">
+            <tr>
+                <th>教室</th>
+                <th colspan="2">混雑状況</th>
+                <th colspan="2">出し物</th>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td id="101-status">確認中</td>
+                <td><button onclick="updateRoom('101');">更新</button></td>
+                <td id="101-program"></td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td id="102-status">確認中</td>
+                <td><button onclick="updateRoom('102');">更新</button></td>
+                <td id="102-program"></td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td id="103-status">確認中</td>
+                <td><button onclick="updateRoom('103');">更新</button></td>
+                <td id="103-program"></td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td id="104-status">確認中</td>
+                <td><button onclick="updateRoom('104');">更新</button></td>
+                <td id="104-program"></td>
+            </tr>
+        </table>
+        <hr>
   </body>
 </html>
