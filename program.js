@@ -18,13 +18,3 @@ function isLoggedIn() {
         return false;
     }
 }
-
-function showProgram(roomName) {
-    var program = {
-        "101": "シーソーの回転気持ち良すぎだろ！",
-        "102": "",
-        "103": "",
-        "104": ""
-    };
-    document.getElementById(roomName + "-program").innerHTML = program[roomName];
-}
